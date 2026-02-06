@@ -1,0 +1,69 @@
+app:
+    api:
+        prefix: v
+    app-version: '@project.version@'
+    crypto:
+        appPasswordAlgorithm: SHA-512
+        userPasswordAlgorithm: AES
+    front:
+        base:
+            url: ${app.server.public.url}
+        calendar:
+            defaultView: timeGridWeek
+        events:
+            calendar:
+                url: ${app.server.public.path}/api/schedule/calendar
+            table:
+                url: ${app.server.public.path}/api/schedule/table
+        public:
+            path: ''
+    locale: en
+    paging:
+        default-value:
+            size: 25
+            schedule-controller:
+                sort-column: 5
+                sort-direction: desc
+    revenue:
+        monthly:
+            goal: 45
+            goal.min: 36
+        weekly:
+            goal: 10
+            goal.min: 8
+    statistics:
+        default-period: 24
+    security:
+        registration:
+            enabled: ''
+        password-expiration:
+            threshold.days: 14
+    server:
+        public:
+            path: ''
+            url: ${ENV_JFSOL_WEB_APP_SERVER_PUBLIC_URL}
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    server:
+        address: localhost
+        port: 8074
+security:
+    basic:
+        enabled: false
+server:
+    port: 8071
+    url: http://localhost:8072
+spring:
+    mvc:
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp
+    thymeleaf:
+        check-template-location: false
+        enabled: false
+springdoc:
+    api-docs:
+        enabled: true

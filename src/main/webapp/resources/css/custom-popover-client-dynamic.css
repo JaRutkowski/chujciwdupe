@@ -1,0 +1,30 @@
+.custom-popover .popover {
+    max-width: 100%;
+    width: auto;
+    padding: 0.25rem;
+    background-color: #000 !important;
+    color: #fff;
+}
+
+.custom-popover .popover-body {
+    padding: 0.25rem;
+    color: #fff;
+    background-color: #000 !important;
+    border-radius: 0.225rem;
+}
+
+.bs-popover-top > .arrow::after, .bs-popover-auto[x-placement^="top"] > .arrow::after {
+    border-top-color: #000 !important;
+}
+
+.bs-popover-bottom > .arrow::after, .bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+    border-bottom-color: #000 !important;
+}
+
+.bs-popover-right > .arrow::after, .bs-popover-auto[x-placement^="right"] > .arrow::after {
+    border-right-color: #000 !important;
+}
+
+.bs-popover-left > .arrow::after, .bs-popover-auto[x-placement^="left"] > .arrow::after {
+    border-left-color: #000 !important;
+}
